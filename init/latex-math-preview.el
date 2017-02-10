@@ -1,0 +1,22 @@
+;; latex-math-preview
+(el-get-bundle latex-math-preview)
+
+(add-hook 'yatex-mode-hook
+       '(lambda ()
+          (YaTeX-define-key " " nil)
+          (YaTeX-define-key "\C-p" 'latex-math-preview-expression)
+          ;; (YaTeX-define-key "\C-p" 'latex-math-preview-save-image-file)
+          (YaTeX-define-key "\C-j" 'latex-math-preview-insert-symbol)
+          ;; (YaTeX-define-key "\C-j" 'latex-math-preview-last-symbol-again)
+          ;; (YaTeX-define-key "\C-b" 'latex-math-preview-beamer-frame)
+          ))
+(autoload 'latex-math-preview-expression "latex-math-preview" nil t)
+(autoload 'latex-math-preview-insert-symbol "latex-math-preview" nil t)
+(autoload 'latex-math-preview-save-image-file "latex-math-preview" nil t)
+(autoload 'latex-math-preview-beamer-frame "latex-math-preview" nil t)
+(defvar latex-math-preview-in-math-mode-p-func 'YaTeX-in-math-mode-p)
+(defvar latex-math-preview-tex-to-png-for-preview '(platex dvipng))
+(defvar latex-math-preview-tex-to-png-for-save '(platex dvipng))
+(defvar latex-math-preview-tex-to-eps-for-save '(platex dvips-to-eps))
+(defvar latex-math-preview-tex-to-ps-for-save '(platex dvips-to-ps))
+(defvar latex-math-preview-beamer-to-png '(platex dvipdfmx gs-to-png))

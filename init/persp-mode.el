@@ -15,4 +15,4 @@
                      (quit nil)))
     (persp-add-buffer (get-buffer bufname))))
 (add-hook 'persp-activated-hook 'persp-register-buffers-on-create)
-(setq 'recentf-exclude '("~/.emacs.d/persp-confs/persp-auto-save"))
+(defvar recentf-exclude '("~/.emacs.d/persp-confs/persp-auto-save"))

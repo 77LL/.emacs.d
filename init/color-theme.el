@@ -117,6 +117,9 @@
    `(hl-line ((,class (:background ,darkblue-bg05)) (t :weight bold)))
 ;;;;; linum-mode
    `(linum ((t (:foreground ,darkblue-red :background ,darkblue-bg))))
+
+	 ;; `(yas-field-highlight-face ((t (:foreground ,darkblue-fg :background ,darkblue-red))))
+	 ;; `(yas--field-debug-face ((t (:foreground ,darkblue-fg :background ,darkblue-red))))
 	))
 
 ;;;###autoload

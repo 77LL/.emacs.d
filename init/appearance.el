@@ -27,7 +27,7 @@
  '(linum-format "%4d"))
 
 ;; font setting
-(add-to-list 'default-frame-alist '(font . "ricty-11"))
+(add-to-list 'default-frame-alist '(font . "ricty-12"))
 
 ;; hl-line
 (global-hl-line-mode)

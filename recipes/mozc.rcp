@@ -1,0 +1,4 @@
+(:name mozc
+			 :file "https://github.com/google/mozc/src/unix/emacs/mozc.el"
+			 :type github
+			 :bkgname: "google/mozc"

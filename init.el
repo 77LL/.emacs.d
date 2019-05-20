@@ -23,6 +23,13 @@
 ;;; Code:
 ;; to use a other setting file
 ;; useage: emacs -l filename
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 ;; (add-to-list 'load-path user-emacs-directory)
@@ -49,4 +56,46 @@
   ;; hide compilation results
   (let ((win (get-buffer-window "*Compile-Log*")))
     (when win (delete-window win))))
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ac-auto-start 2)
+ '(ac-dictionary-directories "/home/wakisaka/.emacs.d/ac-dict")
+ '(ac-quick-help-delay 1.0)
+ '(ac-use-fuzzy t)
+ '(ac-use-menu-map t)
+ '(backup-inhibited t t)
+ '(delete-auto-save-files t)
+ '(flycheck-display-errors-delay 0.5)
+ '(flycheck-idle-change-delay 1.0)
+ '(frame-title-format (format "%%f") t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(inhibit-startup-screen t)
+ '(kill-whole-line t)
+ '(linum-format "%4d")
+ '(make-backup-files nil)
+ '(package-selected-packages (quote (mozc)))
+ '(ring-bell-function (quote ignore))
+ '(show-paren-delay 0)
+ '(show-paren-style (quote mixed))
+ '(use-dialog-box nil)
+ '(visible-bell t)
+ '(yank-excluded-properties t)
+ '(yas-new-snippet-default
+	 "# -*- mode: snippet -*-
+# name: $1
+# key: ${2:${1:$(yas--key-from-desc yas-text)}}
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+$0")
+ '(yas-trigger-key "TAB"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
